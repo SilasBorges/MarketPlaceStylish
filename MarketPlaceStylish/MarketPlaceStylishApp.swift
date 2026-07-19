@@ -11,7 +11,8 @@ import SwiftUI
 struct MarketPlaceStylishApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let viewModel = SplashViewModel()
+            SplashView(viewModel: viewModel)
         }
     }
 }
