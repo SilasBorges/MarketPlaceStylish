@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SignInView: View {
+    
+    @ObservedObject var viewModel: SignInViewModel
 
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -22,13 +24,21 @@ struct SignInView: View {
                     EditTextView(text: .constant("Password"), icon: "lock.fill",
                         placeholder: "Password")
                         .padding(.top, 16)
-                    
                 }
+                
+                HStack() {
+                    Spacer()
+                    Text("Forgot Password?")
+                }
+                
+                
+                
             }.padding()
         }
     }
 }
 
 #Preview {
-    SignInView()
+    let viewModel = SignInViewModel()
+    SignInView(viewModel: viewModel)
 }

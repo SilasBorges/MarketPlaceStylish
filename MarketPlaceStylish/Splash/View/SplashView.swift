@@ -17,7 +17,7 @@ struct SplashView: View {
             case .loading:
                 loadingView()
             case .goToWelcomeFlow:
-                Text("Tela de welcome")
+                viewModel.SignInView()
             case .error(let msg):
                 loadingView(error: msg)
             }

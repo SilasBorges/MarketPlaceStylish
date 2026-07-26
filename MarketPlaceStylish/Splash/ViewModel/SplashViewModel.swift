@@ -19,3 +19,9 @@ class SplashViewModel: ObservableObject {
         }
     }
 }
+
+extension SplashViewModel {
+    func SignInView() -> some View {
+        return SplashViewRouter.makeSignInView()
+    }
+}
