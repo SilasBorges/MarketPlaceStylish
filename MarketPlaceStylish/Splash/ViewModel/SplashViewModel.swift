@@ -10,11 +10,12 @@ import Combine
 
 class SplashViewModel: ObservableObject {
     
-    @Published var uiState = SplashUiState.error("Teste")
+    @Published var uiState: SplashUiState = .loading
     
     func onAppear() {
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.uiState = .loading
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.uiState = .goToWelcomeFlow
         }
     }
 }
