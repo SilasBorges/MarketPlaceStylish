@@ -29,7 +29,11 @@ struct SignInView: View {
                 HStack() {
                     Spacer()
                     Text("Forgot Password?")
-                }
+                        .foregroundColor(.textRed)
+                        .font(.system(size: 12))
+                }.padding(.top, 16)
+                
+                
                 
                 
                 
