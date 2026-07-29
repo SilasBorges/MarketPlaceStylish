@@ -33,10 +33,14 @@ struct SignInView: View {
                         .font(.system(size: 12))
                 }.padding(.top, 16)
                 
+                LoadingButtonView()
+                    .padding(.top, 32)
                 
-                
-                
-                
+                Text("- OR Continue with -")
+                    .font(.system(size: 12))
+                    .foregroundColor(.iconEditText)
+                    .padding(.top, 32)
+               
             }.padding()
         }
     }
